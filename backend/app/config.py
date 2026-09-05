@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
+        extra = "ignore"   # silently skip unknown env vars (e.g. CORS_ORIGIN from old .env)
 
 
 settings = Settings()
