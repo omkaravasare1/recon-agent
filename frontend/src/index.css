@@ -1,0 +1,76 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Razorpay brand palette */
+  --rzp-blue:      #2D6BE4;
+  --rzp-blue-dark: #1A56C4;
+  --rzp-blue-light:#EBF1FD;
+  --rzp-teal:      #00BAC7;
+  --rzp-teal-light:#E5F8F9;
+
+  /* Neutrals */
+  --slate-950:  #020617;
+  --slate-900:  #0f172a;
+  --slate-800:  #1e293b;
+  --slate-700:  #334155;
+  --slate-600:  #475569;
+  --slate-500:  #64748b;
+  --slate-400:  #94a3b8;
+  --slate-300:  #cbd5e1;
+  --slate-200:  #e2e8f0;
+  --slate-100:  #f1f5f9;
+  --slate-50:   #f8fafc;
+  --white:      #ffffff;
+
+  /* Status colors */
+  --green-700:  #15803d;
+  --green-600:  #16a34a;
+  --green-100:  #dcfce7;
+  --green-50:   #f0fdf4;
+  --amber-700:  #b45309;
+  --amber-600:  #d97706;
+  --amber-100:  #fef3c7;
+  --amber-50:   #fffbeb;
+  --red-700:    #b91c1c;
+  --red-600:    #dc2626;
+  --red-100:    #fee2e2;
+  --red-50:     #fef2f2;
+  --violet-600: #7c3aed;
+  --violet-100: #ede9fe;
+
+  /* Radii */
+  --r-sm: 6px;
+  --r:    10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+
+  /* Shadows */
+  --sh-xs: 0 1px 2px rgba(0,0,0,.06);
+  --sh-sm: 0 1px 4px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  --sh:    0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  --sh-lg: 0 8px 24px rgba(0,0,0,.10), 0 4px 8px rgba(0,0,0,.05);
+  --sh-xl: 0 20px 40px rgba(0,0,0,.12);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  color: var(--slate-800);
+  background: #F4F6FA;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { min-height: 100vh; }
+button { cursor: pointer; font-family: inherit; font-size: 14px; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+a { color: inherit; text-decoration: none; }
+.mono { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 12px; letter-spacing: -.3px; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--slate-300); border-radius: 3px; }
+
+@keyframes spin    { to { transform: rotate(360deg) } }
+@keyframes fadeIn  { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+@keyframes pulse   { 0%,100% { opacity: 1 } 50% { opacity: .4 } }
+
+.animate-in { animation: fadeIn .3s ease both; }
