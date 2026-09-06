@@ -2,8 +2,8 @@
  * API client for ReconAgent backend.
  *
  * In development:  Vite's proxy forwards /reconcile → http://localhost:8000
- * In production:   Set VITE_API_BASE in Vercel env vars to your Railway URL
- *                  e.g. https://recon-agent-backend.up.railway.app
+ * In production:   Vercel rewrites /reconcile/* → Railway backend (server-side proxy)
+ *                  No VITE_API_BASE needed — browser only talks to Vercel.
  */
 
 // v2 — production build with VITE_API_BASE
