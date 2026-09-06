@@ -6,6 +6,7 @@
  *                  e.g. https://recon-agent-backend.up.railway.app
  */
 
+// v2 — production build with VITE_API_BASE
 const BASE_URL = import.meta.env.VITE_API_BASE || ''
 const BASE     = `${BASE_URL}/reconcile`
 
