@@ -6,9 +6,9 @@
  *                  No VITE_API_BASE needed — browser only talks to Vercel.
  */
 
-// v2 — production build with VITE_API_BASE
-const BASE_URL = import.meta.env.VITE_API_BASE || ''
-const BASE     = `${BASE_URL}/reconcile`
+// Vercel proxies /reconcile/* → Railway (vercel.json rewrites)
+// Always use relative URL — never call Railway directly from browser
+const BASE = '/reconcile'
 
 async function _json(res) {
   if (!res.ok) {
